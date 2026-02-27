@@ -1,0 +1,31 @@
+cn,Nombre_Presentacion,volumen,cantidad_unidad,cantidad,unidad,correccion,justificacion,correcto
+600000,"DIALENOR 2,27 %, 4 bolsas de 2.500 ml",227 g,227g,227,g,10,"El cálculo es correcto y la cantidad coincide exactamente con la regla del 2,27% aplicado a 4 bolsas de 2500 ml. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 227g,average_score: 10.0}],.",1
+600002,"AEROTIDE 50 microgramos/250 microgramos/INHALACIÓN, 10 inhaladores + 600 alveolos",50000mcg,300000mcg,300000,mcg,1,"La respuesta es incorrecta. Según las reglas proporcionadas,deben multiplicarse 50 mcg por inhalación * 600 inhalaciones por inhalador * 10 inhaladores = 300000 mcg. La respuesta dada (50000mcg) no coincide con este valor. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 300000mcg,average_score: 1.0}],.",0
+600004,"DIALENOR 3,86 %, 6 bolsas de 1.500 ml",34740mg,"347,4g",347.4,g,1,"La concentración 3,86% equivale a 3,86 g por 100 ml. Cada bolsa contiene 1500 ml,por lo que cada una contiene 57,9 g y el total en 6 bolsas es 347,4 g,que debe expresarse en g,no en mg. La respuesta dada (34740mg) no respeta la unidad correcta ni coincide con la cantidad total. Expresado en miligramos, esto equivale a 347 400 mg, por lo que tampoco sería correcto. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 347,4g,average_score: 1.0}],.",0
+600006,"DIALENOR 3,86 %, 5 bolsas de 2.000 ml",386g,386g,386,g,10,"La presentación indica una solución al 3,86% (3,86 g por 100 ml). Cada bolsa contiene 2000 ml,por lo que cada una contiene 77,2 g. Para 5 bolsas: 77,2 g * 5 = 386 g. El cálculo es correcto y sigue las reglas. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 386g,average_score: 10.0}],.",1
+600008,"DIALENOR 3,86 %, 4 bolsas de 2.500 ml",386g,386g,386,g,10,"La presentación es una solución al 3,86%,es decir 3,86 g por cada 100 ml. Cada bolsa contiene 2500 ml,por lo que cada una contiene 96,5 g. En total son 4 bolsas,dando 386 g. La respuesta coincide exactamente con el valor correcto. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 386g,average_score: 10.0}],.",1
+600009,"AEROTIDE 25 microgramos/50 microgramos/INHALACIÓN, 10 inhaladores de 120 dosis",25mcg,30000 mcg,30000,mcg,1,"La respuesta no aplica la regla de multiplicar la cantidad por inhalación por el número total de dosis ni por el número de inhaladores. El cálculo correcto serí­a 25 mcg * 120 dosis * 10 inhaladores = 30000 mcg.  \nLA CANTIDAD DE COMPUESTO CORRECTA SERÍA 30000 mcg,average_score: 1.0}],.",0
+600011,"AEROTIDE 25 microgramos/125 microgramos/INHALACIÓN, 10 inhaladores de 120 dosis",300000mcg,30000mcg,30000,mcg,1,"El primer principio activo es 25 microgramos por inhalación. La presentación contiene 10 inhaladores de 120 dosis,por lo que la cantidad total es 25 * 10 * 120 = 30000mcg. La respuesta dada (300000mcg) es diez veces mayor que la correcta,por lo que es incorrecta. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 30000mcg,average_score: 1.0}],.",0
+600012,"AEROTIDE 25 microgramos/250 microgramos/INHALACIÓN, 10 inhaladores de 120 dosis",300000mcg,30000mcg,30000,mcg,1,"El primer principio activo es 25 microgramos por inhalación. La presentación contiene 10 inhaladores de 120 dosis,por lo que la cantidad total es 25 * 10 * 120 = 30000mcg. La respuesta dada (300000mcg) es diez veces mayor que la correcta,por lo que es incorrecta. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 30000mcg,average_score: 1.0}],.",0
+600014,"DISÓDICO 1 M 120 MG/ML, 100 ampollas de 10 ml",120000mg,120000mg,120000,mg,10,"El cálculo es correcto. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 120000mg,average_score: 10.0}],.",1
+600020,"FICTOMED 1 %, 100 ampollas de 10 ml",10000mg,10000mg,10000,mg,10,"El cálculo es correcto según las reglas. 1% = 10 mg/ml; cada ampolla de 10 ml contiene 100 mg; 100 ampollas contienen 10000 mg. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 10000mg,average_score: 10.0}],.",1
+600022,"FICTOMED 5 %, 100 ampollas de 10 ml",500g,50g,50,g,1,"El 5% corresponde a 5 g por 100 ml. Cada ampolla contiene 10 ml,por lo que contiene 0,5 g. En 100 ampollas,la cantidad total es 50 g. La respuesta dada fue 500g,que es incorrecta por un factor de 10. LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: 50g,average_score: 1.0}],.",0
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
