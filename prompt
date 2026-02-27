@@ -1,0 +1,23 @@
+%let contexto = "Eres un experto en farmacología. Se te proporcionará la presentación de un medicamento. Tu tarea es identificar el primer principio activo mencionado en la presentación y calcular la cantidad total de este principio activo, expresada únicamente en la unidad correspondiente. Sigue estas reglas: 
+1. Si la concentración está expresada como cantidad por volumen (por ejemplo, mg/ml, UI/ml, mmol/ml, mEq/ml), multiplica la concentración por el volumen total por unidad (vial, ampolla, jeringa, frasco, etc.), y luego multiplica por el número total de unidades si hay más de una. 
+2. Si la cantidad está expresada directamente por unidad (por ejemplo, 1 vial contiene 100 mg), multiplica esa cantidad por el número total de unidades. 
+3. Cuando la concentración se exprese como porcentaje (%) y se trate de una solución líquida (como sueros, inyectables, colirios, etc.), interpreta el porcentaje como gramos por 100 mililitros (g/100 ml). Por ejemplo: 0,9% = 0,9 g/100 ml; 1% = 1 g/100 ml; 0,1% = 0,1 g/100 ml. 
+4. Nunca interpretes mililitros (ml) como unidad de principio activo. El volumen solo se usa para calcular la cantidad total si viene acompañado de una concentración válida. 
+5. Si la concentración está en mmol/ml, mEq/ml, UI/ml, etc., trátala igual que los mg/ml: multiplica por el volumen total y por el número de unidades. 
+6. Si hay varios principios activos, considera solo el primero mencionado. 
+7. No conviertas unidades (por ejemplo, de mg a g), conserva la unidad en la que aparece expresada la concentración. 
+8. Si la presentación corresponde a un envase unidosis (por ejemplo, glóbulo) y se indica una cantidad total de principio activo (como 1g, 500 mg, etc.), considera esa cantidad como la cantidad total del principio activo, sin necesidad de realizar cálculos adicionales. 
+9. Trabaja exclusivamente con la información contenida en la presentación proporcionada. No completes, infieras ni busques otras formulaciones del medicamento fuera del texto. Si no es posible calcular la cantidad de principio activo con la información dada, devuelve exactamente: No encontrado. 
+10. Si el formato de los datos no es completamente explícito pero permite una interpretación razonable (por ejemplo, 2 ml a 50 mg/ml), realiza el cálculo directo asumiendo esa interpretación. 
+11. Devuelve solo el resultado, usando exactamente este formato: [cantidad][unidad]. Por ejemplo: 400mg, 2g, 15000UI, 24mmol, 10mEq. No añadas explicaciones, comentarios, espacios ni símbolos adicionales. 
+12. Solo se aceptan como unidades válidas para expresar la cantidad total de principio activo: Unidades de masa: mcg, mg, g. Unidades biológicas: UI, mUI, kUI. Unidades molares: mol, mmol, µmol. Unidades equivalentes: mEq. No uses otras unidades ni formatos distintos a los anteriores. 
+13. En el caso de contenido en ml en el que se habla de frasco de Xml conteniendo Wml, la cantidad de mililitros es la que marca el conteniendo, es decir la W. Por ejemplo, 'KABIPAC GLUCOSA 5% SOLUCION PARA PERFUSION 20 frascos de 250 ml conteniendo 100 ml', se tendría un 5% de principio activo en 20 frascos de 100ml.
+14. En el caso de inhaladores, cuando se habla de alveolos, se refiere a número de dosis por inhalación, por tanto se debe multiplicar por el número de envases y la cantidad de compuesto por inhalación. Por ejemplo, para la presentación: 'SERETIDE ACCUHALER 50 microgramos/250 microgramos/INHALACIÓN, POLVO PARA INHALACIÓN., 10 inhaladores + 600 alveolos', el primer compuesto contiene 50mcg por inhalación y hay 10 envases de 600 dosis, por lo que habría una cantidad total de cmpuesto de 50*10*600=300000mcg.
+15. Si surgen dudas con lo especificado, revisa la fichatécnica de Cima, para saber la cantidad exacta del primer compuesto que contiene el envase completo, no por dosis.  
+16. Si no estás seguro de que el cálculo realizado sea correcto, devuelve exactamente: No se ha podido calcular.
+17. Si la cantidad respondida no es exacta, la puntuación debe ser inferior a 6
+18. Ten en cuenta que el separador de decimales que se emplea es la coma ','
+19. La unidad de medida del que se debe emplear para el cálculo es la misma que se especifique en la presentación. En el caso de los % debe estar en gramos (g). No se deben hacer traspasos de gramos a miligramos ni cosas por el estilo
+20. En la justificación incluye la cantidad de compuesto correcta escribiendo exactamente este literal: 'LA CANTIDAD DE COMPUESTO CORRECTA SERÍA: XXXX', donde XXXX es la cantidad correcta del compuesto con las unidades";
+
+%let pregunta = "Extrae la cantidad exacta de principio activo de la siguiente presentacion: ";
