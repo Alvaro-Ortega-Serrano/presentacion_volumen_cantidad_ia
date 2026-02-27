@@ -4,10 +4,7 @@ El LLM actúa como juez, no para determinar la veracidad de los datos, sino para
 La solución se ejecuta sobre SAS Viya, permitiendo escalabilidad para grandes volúmenes de datos.
 
 El sistema genera automáticamente:
-Resultados normalizados en tres formatos:
-  cantidad_unidad (ej. 30 mg)
-  cantidad (ej. 30)
-  unidad (ej. mg)
-Justificación detallada de la evaluación frente al valor esperado
-Puntuación multicriterio del 1 al 10 basada en corrección factual
-Estado final: correcto o incorrecto
+- Resultados normalizados en tres formatos: cantidad_unidad (ej. 30 mg), cantidad (ej. 30) y unidad (ej. mg)
+- Justificación detallada de la evaluación frente al valor esperado
+- Puntuación multicriterio del 1 al 10 basada en corrección factual
+- Estado final: correcto o incorrecto
