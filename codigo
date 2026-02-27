@@ -1,0 +1,34 @@
+/****************************************************/
+/*          FLUJO PRINCIPAL                         */
+/****************************************************/
+
+/* 1. Primero se inicia sesión en CAS para ver todas las librerías y tablas disponibles*/
+options CASDATALIMIT=ALL;
+
+/* 2. Después se define la tabla de origen de los datos, la variable a analizar, la variable de respuesta y el número de observaciones que se desean obtener en esta ejecución*/
+%let lib_ini=FARMA;
+%let tab_ini=PRESENTACIONES;
+%let var_estudio=Nombre_Presentacion;
+%let var_resp=volumen;
+%let obs=10;
+%let firstobs=1;
+
+/* 3. Ahora se definen los parámetros de conexión con la API*/
+%let api_key= " ";
+%let url=https://msan-ec-sweden.openai.azure.com/;
+%let version=2024-12-01-preview;
+%let model_name=gpt-5.1-chat;
+
+/* 4. Aqui se define la librería y la tabla de salida*/
+%let lib_fin=work;
+%let tab_fin=PRESENTACIONES_CANTIDAD_punt;
+
+/* 5. Aqui se define el criterio de evaluación utilizado */
+%let criterios = Corrección factual;
+%let criterios_var = correccion;
+%let criterio_valor = Corrección factual (1-10): <valor>;
+
+/* 5. Aqui se selecciona el modelo a utilizar y se llama a la macro */
+%let modelo_python = azure;
+%include script ('evalua_IA.sas');
+%evalua_IA;
